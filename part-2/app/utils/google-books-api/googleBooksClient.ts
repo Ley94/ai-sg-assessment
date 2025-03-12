@@ -2,7 +2,9 @@
 
 import ApiError from "@/app/errors/ApiError";
 
-const BASE_URL = process.env.NEXT_PUBLIC_GOOGLE_BOOKS_API_BASE_URL;
+const BASE_URL =
+  process.env.NEXT_PUBLIC_GOOGLE_BOOKS_API_BASE_URL ||
+  "https://www.googleapis.com/books/v1";
 
 export const getBooks = async (query: string, page = 1, maxResults = 10) => {
   const orderBy = "relevance";
