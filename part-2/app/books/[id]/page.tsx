@@ -9,7 +9,7 @@ import DOMPurify from "isomorphic-dompurify";
 export default async function BookDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
   let book = null;
