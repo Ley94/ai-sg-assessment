@@ -6,9 +6,9 @@ This Python program fetches a [text file from Project Gutenberg](https://www.gut
 
 ## Assumptions and Constraints
 
-- The program assumes words are defined as alphanumeric strings (letters and numbers).
-- The program assumes words separated by non-alphanumeric characters (e.g., hyphens) are treated as separate words (e.g., 'breath-taking' is considered as two words: 'breath' and 'taking').
-- The program treats text as case-insensitive (e.g., 'word' and 'Word' are considered the same).
+- The program assumes words are defined as alphanumeric strings (letters and numbers). This is a simple and reasonable approach, as English words are typically composed of alphabets, though it may not account for certain nuances (e.g., words with apostrophes like "don't").
+- The program assumes words separated by non-alphanumeric characters (e.g., hyphens) are treated as separate words. For example, "breath-taking" is considered two words: "breath" and "taking." While this treatment simplifies the implementation, it may not be ideal in all contexts.
+- The program treats text as case-insensitive (e.g., 'word' and 'Word' are considered the same). This assumption can lead to the loss of information in certain contexts, such as acronyms or words where case is meaningful, but it simplifies the task of frequency counting.
 - No third-party libraries (other than Python's standard library) are used.
 
 ## Features
@@ -22,7 +22,7 @@ This Python program fetches a [text file from Project Gutenberg](https://www.gut
 
 ## Requirements
 
-- Python 3.12.2 (compatible with Python 3.7+).
+- **Python 3.12.2 (compatible with Python 3.7+)**.
 - No external libraries or dependencies are required—only Python's standard library is used.
 
 ## Usage
